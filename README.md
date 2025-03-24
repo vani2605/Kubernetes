@@ -1,7 +1,23 @@
-# Kubernetes
-All about Kubernetes
+## Kubernetes EKS Upgrade
 
-# Kubernetes Best Practices
+### Updating EKS Cluster includes below steps
+
+- Check current EKS Version and latest available version.
+- Upgrade EKS ControlPlane : EKS Controlplane should be upgraded before upgrading Worker Nodes
+  - Update EKS version from 1.28 to 1.29 in terraform
+- Ugrade Managed Node Groups
+  - Update ami version with updated(1.29) version
+- If you are using self manager Worker Nodes. Update Autoscaling group(Launch template) with new ami.
+- Upgrade eks add-ons.
+   - vpc cni,
+   - kube-proxy
+   - CoreDNS
+   - Amazon EBS CSI Driver
+   - Amazon EFS CSI Driver
+- Upgrade managed add-ons(Nginx, metrics-server, prometheus, Istio, cluster-autoscaler,flutbit etc)
+
+
+## Kubernetes Best Practices
 1. Use Namespaces to isolate workloads
 2. Limit Cluster size
 3. Resource management: Set resource limits and requests for CPU and Memory for deployments.
