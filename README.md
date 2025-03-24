@@ -1,5 +1,11 @@
 ## Kubernetes EKS Upgrade
-
+### Pre-requesites and Best practices
+- one version at a time
+- backup all the manifests deployed in cluster.
+- kubectl version update, current eks version can support 3 prior version of kubectl.
+- compatalibility check for add-ons
+- Refer changelog for changes in latest version
+  
 ### Updating EKS Cluster includes below steps
 
 - Check current EKS Version and latest available version.
