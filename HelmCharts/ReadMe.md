@@ -1,3 +1,38 @@
+## Helm Cheat Sheet
+
+- ### Create a Chart
+
+  `helm create mychart`
+
+ - ### Install and Uninstall chart
+
+   `helm install <release-name> <chart-name>`
+  
+   `helm install myapp mychart/ `
+  
+   `helm uninstall <release-name>`
+   
+   `helm uninstall myapp`
+  
+   
+   `helm list` -- to list installed charts
+
+ - ### Upgrade chart
+
+   `helm upgrade <release-name> <chart-name>`
+   
+   `helm upgrade myapp mychart/`
+
+ - ### Rollback
+
+   `helm rollback <release-name> <revision-number>`
+   
+   `helm rollback myapp 1`
+
+   
+
+
+
 ## Helm Chart Best Practices
   
 - ### Follow standarad helm chart structure
