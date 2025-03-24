@@ -5,6 +5,10 @@
 - kubectl version update, current eks version can support 3 prior version of kubectl.
 - compatalibility check for add-ons
 - Refer changelog for changes in latest version
+- Perform one step at a time
+- Make sure Subnet has enogh IP's.
+- Make sure SG
+- Review the version skew between the Kubernetes kube-apiserver and the kubelet on your nodes
   
 ### Updating EKS Cluster includes below steps
 
